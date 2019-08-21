@@ -1,2 +1,0 @@
-//Получить можно по ссылке https://milosvetovae.github.io
-document.getElementsByClassName('contacts')[0];

@@ -1,0 +1,14 @@
+.body__block {
+    width: 300px;
+    height: 300px;
+    background: url(https://freehtmlthemes.ru/assets/images/articles/css-fon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+&__text {
+    color: rgba(29, 29, 37, 0.664);
+    font-size: 30px;
+    text-align: center;
+    vertical-align: center;
+}
+}
