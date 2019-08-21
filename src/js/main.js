@@ -1,3 +1,4 @@
+//5.1
 var block = document.getElementsByTagName('body')[0];
   document.getElementsByTagName('body')[0].innerHTML = "<div></div>";
 
@@ -7,3 +8,7 @@ var block1 = document.getElementsByTagName('div')[0];
 
 var block2 = document.getElementsByTagName('p')[0];
   block2.classList.add('body__block__text');
+
+
+//5.2
+document.getElementsByClassName('body__block')[0];
