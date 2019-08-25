@@ -12,3 +12,63 @@
     vertical-align: center;
 }
 }
+
+// @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese');
+
+// body {
+//     font-family: 'Pacifico', cursive;
+//     width: 1180px;
+//     display: grid;
+//     grid-template-columns: 4;
+//     background-color: slategray;
+// }
+
+// th {
+//     background-color: plum;
+//     border: 0.5px solid;
+// }
+
+// .table {
+//     background: lightblue;
+//     width: 500px;
+//     border: ridge;
+//     grid-column-start: 3;
+//     grid-column-end: 5;
+//     border-collapse: collapse;
+//     border: 0.5px solid;
+
+// &__caption {
+//     font-size: 36px;
+// }
+// }
+
+// .enter {
+//     grid-column-start: 1;
+//     grid-column-end: 3;
+
+// &__title {
+//     font-size: 26px;
+//     text-align: center;
+// }
+
+// &__action {
+//     display: grid;
+//     grid-template-columns: 3;
+//     padding-top: 40px;
+//     font-size: 20px;
+
+//     &__add {
+//         grid-column-start: 1;
+//         grid-column-end: 2;
+//     }
+//     &__delete {
+//         grid-column-start: 2;
+//         grid-column-end: 3;
+//     }
+//     &__change{
+//         grid-column-start: 3;
+//         grid-column-end: 4;
+//     }
+// }
+// }
+
