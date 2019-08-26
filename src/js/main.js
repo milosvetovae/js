@@ -1,38 +1,37 @@
-//5.1 + 5.3 + 5.4
-var block = document.getElementsByTagName('body')[0];
-  document.getElementsByTagName('body')[0].innerHTML = "<div></div>";
+//6.1 & 6.2
+var button = document.getElementsByClassName("change-block__elem")[0];
+    
+button.onclick = function push () {
+    if (document.getElementsByClassName("change-block__elem")[0]) {
+      document.getElementsByClassName("change-block__elem")[0].style.backgroundColor = "blue";
+      document.getElementsByClassName("change-block__elem")[0].style.width = "300px";
+      document.getElementsByClassName("change-block__elem")[0].style.color = "white";
+      document.getElementsByClassName("change-block__elem")[0].value = ":)";
+      var div = document.createElement("div");
+          div.className = "new";
+          document.body.append(div);
+      document.getElementsByClassName("new")[0].style.width = "150px";
+      document.getElementsByClassName("new")[0].style.height = "150px";
+      document.getElementsByClassName("new")[0].style.background = "url(https://cs4.pikabu.ru/images/big_size_comm/2015-01_3/14211988902791.jpg)";
+      document.getElementsByClassName("new")[0].style.backgroundSize = "contain";
+      document.getElementsByClassName("new")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("new")[0].style.transform = "translate(340%, -130%)";
+      document.getElementsByClassName("new")[0].style.borderRadius = "70px";
+    } else {
+      alert("Error!"); 
+    }
+  }
 
-var block1 = document.getElementsByTagName('div')[0];
-  block1.classList.add('body__block');
-  document.getElementsByTagName('div')[0].innerHTML = "<p>Страница еще не создана<br>ERROR 404</p>";
-  block1.classList.add('one');
-  block1.classList.add('two');
-    var classOne = document.getElementsByClassName('one')[0];
-    classOne.style.borderRadius = '50px';
-    var classTwo = document.getElementsByClassName('two')[0];
-    classTwo.style.padding = '300px 300px';
-  var change = [{borderRadius: '70px'}, {borderRadius: '270px'}, {borderRadius: '470px'}];
-  var change1 = [{background: 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKG4GC-1mYYQdJT9v8TCoEfJQ5asJ2o3GGxb-Uzv8G41o8h8TpDg)', backgroundSize: 'cover'}, {background: 'url(https://i.pinimg.com/736x/d2/ab/90/d2ab900cef1e93d155e9c557fd23225f.jpg)', backgroundSize: 'cover'}, {background: 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtw1RBVck7uU6rZP0mhLV14w33oYdxzKKSOSX1OnXx19lWF7l0)', backgroundSize: 'cover'}];
-  classOne.addEventListener('click', function() {
-    classOne.animate (change, {
-      duration: 3000,
-      fill: 'forwards'
-    });
-  });
-  classOne.addEventListener('click', function() {
-    classOne.animate (change1, {
-      duration: 3000,
-      fill: 'forwards'
-    });
-  });
+function change () {
+  if (document.getElementsByClassName("change-block")[0]) {
+    document.getElementsByClassName("change-block")[0].style.width = "1180px";
+    document.getElementsByClassName("change-block")[0].style.backgroundColor = "green";
+  } else {
+    alert("Error!"); 
+  }
+}
 
-
-var block2 = document.getElementsByTagName('p')[0];
-  block2.classList.add('body__block__text');
-
-
-//5.2
-document.getElementsByClassName('body__block')[0];
+document.getElementsByClassName("change-block")[0].addEventListener("click", change);
 
 
 
