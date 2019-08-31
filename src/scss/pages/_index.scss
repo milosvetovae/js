@@ -1,92 +1,140 @@
-.change-block {
-    width: 300px;
-    background: url('https://i.ytimg.com/vi/H6L2XGkrMHw/maxresdefault.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 400px;
-    transition: 2s;
-    text-align: center;
-    padding-top: 100px;
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese');
+body {
+    font-family: 'Pacifico', cursive;
+    width: 1180px;
+    background-color: slategray;
+}
 
-&__elem {
-    background-color: rgb(86, 81, 116);
-    width: 100px;
-    height: 100px;
-    // transform: translate(100%, 100%);
-    cursor: pointer;
-    border: none;
-    font-size: 20px;
-    transition: 2s;
+.container {
+    display: grid;
+    grid-template-columns: 4;
+}
 
-    &:hover {
-        transition: 2s;
-        background-color: dimgray;
+th {
+    background-color: plum;
+    border: 0.5px solid;
+}
+
+.table {
+    background: lightblue;
+    width: 600px;
+    border: ridge;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    border-collapse: collapse;
+    border: 0.5px solid;
+    &__caption {
+        font-size: 36px;
+        color: deepskyblue;
     }
-
-}
 }
 
-:active, :hover, :focus {
-    outline: 0;
-    outline-offset: 0;
+.enter {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    &__title {
+        font-size: 26px;
+        text-align: center;
+    }
+    &__action {
+        display: grid;
+        grid-template-columns: 3;
+        padding-top: 20px;
+        font-size: 20px;
+        &_js {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            max-width: 550px;
+            margin-left: 15px;
+            padding-left: 15px;
+            border: 0.5px solid;
+            height: 30px;
+            font-family: 'Pacifico', cursive;
+        }
+        &__button_js {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            cursor: pointer;
+            max-width: 550px;
+            margin-left: 15px;
+            padding-left: 15px;
+            margin-top: 10px;
+            border: 0.5px solid;
+            height: 30px;
+            font-family: 'Pacifico', cursive;
+        }
+    }
 }
 
-// @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese');
+.add-table-item_js {
+    cursor: pointer;
+    transform: translateY(-20%);
+    padding-top: 10px;
+    padding-left: 20px;
+    position: relative;
+}
 
-// body {
-//     font-family: 'Pacifico', cursive;
-//     width: 1180px;
-//     display: grid;
-//     grid-template-columns: 4;
-//     background-color: slategray;
-// }
+.btn-delete_js {
+    position: absolute;
+    display: inline-block;
+    transform: translateY(80%);
+    width: 30px;
+    height: 30px;
+    background: url('./img/del.png');
+    background-size: contain;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+}
 
-// th {
-//     background-color: plum;
-//     border: 0.5px solid;
-// }
+.btn-delete-new_js {
+    position: absolute;
+    display: inline-block;
+    transform: translateY(40%);
+    width: 30px;
+    height: 30px;
+    background: url('./img/del.png');
+    background-size: contain;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+}
 
-// .table {
-//     background: lightblue;
-//     width: 500px;
-//     border: ridge;
-//     grid-column-start: 3;
-//     grid-column-end: 5;
-//     border-collapse: collapse;
-//     border: 0.5px solid;
+.btn-change_js {
+    position: absolute;
+    display: inline-block;
+    transform: translateY(80%);
+    width: 30px;
+    height: 30px;
+    background: url('./img/change.png');
+    background-size: contain;
+    cursor: pointer;
+    right: 50px;
+    top: 0;
+}
 
-// &__caption {
-//     font-size: 36px;
-// }
-// }
+.change-ok_js {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+}
 
-// .enter {
-//     grid-column-start: 1;
-//     grid-column-end: 3;
+.change-inp_js {
+    display: inline-block;
+    width: 300px;
+    height: 20px;
+}
 
-// &__title {
-//     font-size: 26px;
-//     text-align: center;
-// }
+.temperature {
+    background-color: darksalmon;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid;
+}
 
-// &__action {
-//     display: grid;
-//     grid-template-columns: 3;
-//     padding-top: 40px;
-//     font-size: 20px;
-
-//     &__add {
-//         grid-column-start: 1;
-//         grid-column-end: 2;
-//     }
-//     &__delete {
-//         grid-column-start: 2;
-//         grid-column-end: 3;
-//     }
-//     &__change{
-//         grid-column-start: 3;
-//         grid-column-end: 4;
-//     }
-// }
-// }
-
+.temperature__enter__res_js {
+    width: 250px;
+    height: 20px;
+    color: black;
+}
