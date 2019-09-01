@@ -1,81 +1,129 @@
-//7.1
-var button = document.querySelector(".enter__action__button_js"),
-    mean = document.querySelector(".enter__action_js"),
-    add = document.querySelector(".table");
+//ТАЙМЕР
+var dateInput = document.querySelector('#date__input_js');
+var dateResult = document.querySelector('#date__result_js');
+var timerId;
 
-button.addEventListener('click', function() {
+//функция отсчета мс до нужной даты + валидация
+dateInput.oninput = function() {
+    var aInput = dateInput.value;
+    var now = new Date();
+        mAInput = Date.parse(aInput);
+        mNow = Date.parse(now);
+    if (mAInput <= mNow) {
+        alert('Вы не можете выбрать дату раньше сегодня!');
+        aInput.value = "";
+    } else {
+        clearInterval(timerId);
+        timerId = setInterval(startDate, 1000, mAInput);
+    }
+}
 
-    // добавляем элементы таблицы
-    var enter_tr = document.createElement('tr');
-    var enter_td = document.createElement('td');
-    // добавляем элемент div
-    var enter = document.createElement('div');
-    enter.className = 'business_js';
-    enter.innerHTML = '<p id="mean">' + mean.value + '</p>';
-    enter.classList.add('add-table-item_js');
-    // добавляем кнопки удалить и редактировать каждому новому элементу списка
-    var btn_delete = document.createElement('div');
-    var btn_change = document.createElement('div');
-    btn_delete.className = 'btn-delete_js';
-    btn_change.className = 'btn-change_js';
+//функция получения кол-ва оставшихся дней
+function getDays(day) {
+    return Math.round(day / 86400000);
+}
 
-    // функция удаления по нажатию на кнопку
-    btn_delete.addEventListener('click', function(event) {
-        var a = event.target;
-        var b = a.parentElement;
-        var c = b.parentElement;
-        var d = c.parentElement;
-        d.remove();
-    })
+//функция перевода даты из мс в адекватный вид
+function startDate(event) {
+    var mN = new Date(),
+        mN = Date.parse(mN);
+    var raz = event - mN,
+        raz = new Date(raz);
+    dateResult.innerHTML = getDays(Date.parse(raz)) + ' д., ' + raz.getHours() + ' ч., ' + raz.getMinutes() + ' мин., ' + raz.getSeconds() + ' сек. ';
+}
 
-    //функция редактирования по нажатию на кнопку
-    btn_change.addEventListener('click', function(event) {
-        var change_inp = document.createElement('input');
-        var change_ok = document.createElement('div');
-        change_ok.className = 'change-ok_js';
-        change_inp.className = 'change-inp_js';
-        change_ok.innerText = 'OK';
-        change_inp.value = 'Менять планы не хорошо! Но один раз прощаю.';
 
-        var a = event.target;
-        var b = a.parentElement;
+// ЛАМПОЧКИ
+//первая лампочка
+var lampsHover1 = document.querySelector('#lamps__hover__1_js');
 
-        b.append(change_inp);
-        b.append(change_ok);
+lampsHover1.addEventListener('mouseover', function(event) {
+    var a = event.target;
+    a.style.backgroundImage = 'url("img/lamps.png")';
+    a.style.filter = 'drop-shadow(0 0 3px rgba(100,0,0,0.5))';
+    a.style.backgroundSize = '300px';
+    a.style.backgroundPositionX = '-14px';
+    a.style.backgroundPositionY = '7px';
+    var lamps = document.querySelector('.lamps');
+    lamps.style.background = 'rgba(0,0,0,0.5)';
+});
 
-        change_ok.addEventListener('click', function (event) {
-            enter.innerText = change_inp.value;
-            var btn_delete = document.createElement('div');
-            btn_delete.className = 'btn-delete-new_js';
+lampsHover1.addEventListener('mouseout', function(event) {
+    var a = event.target;
+    a.style.backgroundImage = 'url("img/black.png")';
+    a.style.backgroundSize = '100%';
+    a.style.backgroundPositionX = '0px';
+    a.style.backgroundPositionY = '0px';
+    var lamps = document.querySelector('.lamps');
+    lamps.style.background = 'aliceblue';
+});
 
-            btn_delete.addEventListener('click', function(event) {
-                var a = event.target;
-                var b = a.parentElement;
-                var c = b.parentElement;
-                var d = c.parentElement;
-                d.remove();
-            })
+//вторая лампочка
+var lampsHover2 = document.querySelector('#lamps__hover__2_js');
 
-            enter.append(btn_delete);
-        })
-    })
+lampsHover2.addEventListener('mouseover', function(event) {
+    var a = event.target;
+    a.style.backgroundImage = 'url("img/lamps.png")';
+    a.style.filter = 'drop-shadow(0 0 3px rgba(100,0,0,0.5))';
+    a.style.backgroundSize = '300px';
+    a.style.backgroundPositionX = '-14px';
+    a.style.backgroundPositionY = '207px';
+    var lamps = document.querySelector('.lamps');
+    lamps.style.background = 'rgba(239, 206, 74, 0.5)';
+});
 
-    //расположение основных созданных элементов на странице
-    enter.append(btn_delete);
-    enter.append(btn_change);
-    enter_td.append(enter);
-    enter_tr.append(enter_td);
-    add.append(enter_tr);
+lampsHover2.addEventListener('mouseout', function(event) {
+    var a = event.target;
+    a.style.backgroundImage = 'url("img/yellow.png")';
+    a.style.backgroundSize = '100%';
+    a.style.backgroundPositionX = '0px';
+    a.style.backgroundPositionY = '0px';
+    var lamps = document.querySelector('.lamps');
+    lamps.style.background = 'aliceblue';
 });
 
 
+//третья лампочка
+var lampsHover3 = document.querySelector('#lamps__hover__3_js');
 
-//7.2
-var temp = document.getElementsByClassName('temperature__enter__mean_js')[0];
+lampsHover3.addEventListener('mouseover', function(event) {
+    var a = event.target;
+    a.style.backgroundImage = 'url("img/lamps.png")';
+    a.style.filter = 'drop-shadow(0 0 3px rgba(100,0,0,0.5))';
+    a.style.backgroundSize = '300px';
+    a.style.backgroundPositionX = '-14px';
+    a.style.backgroundPositionY = '405px';
+    var lamps = document.querySelector('.lamps');
+    lamps.style.background = 'rgba(66, 141, 255, 0.5)';
+});
 
-temp.oninput = function () {
-    var res = document.getElementsByClassName('temperature__enter__res_js')[0];
-    res.value = ((temp.value * (9/5)) + 32) + "°F";
-    return res;
-};
+lampsHover3.addEventListener('mouseout', function(event) {
+    var a = event.target;
+    a.style.backgroundImage = 'url("img/blue.png")';
+    a.style.backgroundSize = '100%';
+    a.style.backgroundPositionX = '0px';
+    a.style.backgroundPositionY = '0px';
+    var lamps = document.querySelector('.lamps');
+    lamps.style.background = 'aliceblue';
+});
 
+
+//ПАРАЛЛАКС ЭФФЕКТ
+var hover = document.querySelector('.parallax__bg');
+
+hover.addEventListener('mouseover', function(event) {
+    var a = event.target;
+    a.style.transition = 'all 2s';
+    a.style.backgroundImage = 'linear-gradient(to top, rgba(147, 146, 153, 0.3) 0%, rgba(73, 73, 73, 0.3) 100%), url("img/okna.png")';
+});
+
+hover.addEventListener('mouseout', function(event) {
+    var a = event.target;
+    a.style.transition = 'all 2s';
+    a.style.backgroundImage = 'linear-gradient(to top, rgba(147, 146, 153, 0.85) 0%, rgba(73, 73, 73, 0.85) 100%), url("img/okna.png")';
+});
+
+document.addEventListener('scroll', function() {
+    var pos = window.pageYOffset * 0.15;
+    document.getElementsByClassName('parallax__bg')[0].style.backgroundPositionY = pos + '%';
+});

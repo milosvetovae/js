@@ -1,0 +1,41 @@
+.date {
+    background-color: #F1F1F1;
+    padding-bottom: 57px;
+
+&__title {
+    font-family: "Bebas Neue";
+    font-size: 35px;
+    line-height: 36px;
+    padding-top: 47px;
+    padding-bottom: 38px;
+}
+
+&__input {
+    width: 380px;
+    height: 42px;
+    border: 2px solid #3590CC;
+}
+
+&__result {
+    display: flex;
+    width: 750px;
+    justify-content: space-between;
+    padding-top: 32px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+
+    &__res {
+        width: 310px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        border: none;
+        background-color: #F1F1F1;
+    }
+}
+}

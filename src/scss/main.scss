@@ -1,8 +1,15 @@
 //Импорт общих стилей
+@import "./components/common";
 
 //Импорт шрифтов
+@import "./components/fonts";
 
 //Импорт стилей страниц
 @import "./pages/index";
 
 //Импорт компонентов для страниц
+@import "./components/header";
+@import "./components/date";
+@import "./components/lamps";
+@import "./components/parallax";
+@import "./components/slider";

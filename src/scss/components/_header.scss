@@ -1,0 +1,37 @@
+.header {
+    padding-top: 17px;
+    padding-bottom: 16px;
+
+&__logo {
+    width: 212px;
+    height: 68px;
+    background: url('./img/logo.png');
+    background-size: cover;
+    }
+
+&__menu {
+    text-align: right;
+    font-family: 'Open Sans Condensed';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+    width: 561px;
+
+    &__line1 {
+        padding-left: 45px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__line2 {
+        display: flex;
+        justify-content: space-between;
+    }
+    }
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,37 +1,16 @@
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="main.css" rel="stylesheet">
     <title>JS</title>
 </head>
-
 <body>
-    <div class="container">
-        <div class="enter">
-            <div class="enter__title">Введите действие, которое необходимо осуществить:</div>
-            <div class="enter__action">
-                <input type="text" class="enter__action_js" name="type" value="Например: доделать header и его адаптив">
-                <input type="button" class="enter__action__button_js" name="button" value="OK">
-            </div>
-            <div class="temperature">
-                <div class="temperature__title"><strong>Сколько градусов по Фаренгейту?</strong></div>
-                <div class="temperature__enter">
-                    <p class="temperature__enter__des">Введите градусы по цельсию:</p>
-                    <input type="number" class="temperature__enter__mean_js" value="">
-                    <p class="temperature__enter__des">Результат:</p>
-                    <input type="text" class="temperature__enter__res_js">
-                </div>
-            </div>
-        </div>
-        <table border="1" class="table" cols="1">
-            <caption class='table__caption'>Список очень важных дел</caption>
-            <tr>
-                <th>Что нужно сделать:</th>
-            </tr>
-        </table>
-    </div>
+    @@include('./../components/header.html')
+    @@include('./../components/date.html')
+    @@include('./../components/lamps.html')
+    @@include('./../components/parallax.html')
+    @@include('./../components/slider.html')
 </body>
 <script src="script.js"></script>
 </html>
