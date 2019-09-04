@@ -124,6 +124,6 @@ hover.addEventListener('mouseout', function(event) {
 });
 
 document.addEventListener('scroll', function() {
-    var pos = window.pageYOffset * 0.15;
+    var pos = window.pageYOffset / 8;
     document.getElementsByClassName('parallax__bg')[0].style.backgroundPositionY = pos + '%';
 });
