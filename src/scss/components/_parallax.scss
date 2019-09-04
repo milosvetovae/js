@@ -1,8 +1,8 @@
 .parallax {
     background: #F1F1F1;
     padding-top: 60px;
-    padding-bottom: 1000px;
-    transition: all 2s;
+    padding-bottom: 400px;
+    transition: 5s;
     
 &__title {
     font-family: 'Bebas Neue';
@@ -17,7 +17,7 @@
     width: 780px;
     height: 402px;
     margin-left: 200px;
-    background-size: cover;
+    background-size: 100%;
     position: relative;
 
     &__title {

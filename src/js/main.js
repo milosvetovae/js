@@ -113,17 +113,17 @@ var hover = document.querySelector('.parallax__bg');
 
 hover.addEventListener('mouseover', function(event) {
     var a = event.target;
-    a.style.transition = 'all 2s';
-    a.style.backgroundImage = 'linear-gradient(to top, rgba(147, 146, 153, 0.3) 0%, rgba(73, 73, 73, 0.3) 100%), url("img/okna.png")';
+    a.style.transition = '5s';
+    a.style.backgroundSize = '120%';
 });
 
 hover.addEventListener('mouseout', function(event) {
     var a = event.target;
-    a.style.transition = 'all 2s';
-    a.style.backgroundImage = 'linear-gradient(to top, rgba(147, 146, 153, 0.85) 0%, rgba(73, 73, 73, 0.85) 100%), url("img/okna.png")';
-});
+    a.style.transition = '5s';
+    a.style.backgroundSize = '100%';
+ });
 
 document.addEventListener('scroll', function() {
-    var pos = window.pageYOffset / 8;
+    var pos = window.pageYOffset / 6;
     document.getElementsByClassName('parallax__bg')[0].style.backgroundPositionY = pos + '%';
 });
