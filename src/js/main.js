@@ -111,19 +111,21 @@ lampsHover3.addEventListener('mouseout', function(event) {
 //ПАРАЛЛАКС ЭФФЕКТ
 var hover = document.querySelector('.parallax__bg');
 
+document.addEventListener('scroll', function() {
+    var pos = window.pageYOffset / 6;
+    document.getElementsByClassName('parallax__bg')[0].style.transition = '1s';
+    document.getElementsByClassName('parallax__bg')[0].style.backgroundPositionY = pos + '%';
+});
+
 hover.addEventListener('mouseover', function(event) {
     var a = event.target;
-    a.style.transition = '5s';
+    a.style.transition = '3s';
     a.style.backgroundSize = '120%';
 });
 
 hover.addEventListener('mouseout', function(event) {
     var a = event.target;
-    a.style.transition = '5s';
+    a.style.transition = '3s';
     a.style.backgroundSize = '100%';
  });
 
-document.addEventListener('scroll', function() {
-    var pos = window.pageYOffset / 6;
-    document.getElementsByClassName('parallax__bg')[0].style.backgroundPositionY = pos + '%';
-});
